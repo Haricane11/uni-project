@@ -1,0 +1,92 @@
+.loginSignup-section {
+  padding-block: var(--section-padding-medium);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-text-container,
+.signup-text-container {
+  margin-block-end: 4em;
+}
+
+.login-text-container,
+.signup-text-container,
+.form-container {
+  width: 100%;
+}
+
+.signup-text-container h1 {
+  font-size: 3.75em;
+}
+
+.login-text-container h1 {
+  font-size: 2.75em;
+}
+
+.light-theme .signup-text-container h1,
+.light-theme .login-text-container h1 {
+  color: var(--color-dark);
+}
+
+.dark-theme .signup-text-container h1,
+.dark-theme .login-text-container h1 {
+  color: var(--color-light);
+}
+
+.form-row h4 {
+  font-size: 1em;
+}
+
+.light-theme .form-row h4 {
+  color: var(--color-dark);
+}
+
+.dark-theme .form-row h4 {
+  color: var(--color-light);
+}
+
+.form-row:not(:last-child) {
+  margin-block-end: 1.5em;
+}
+
+.form-row:last-child {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+@media (min-width: 1024px) {
+  .loginSignup-section {
+    flex-direction: row;
+    gap: var(--section-gap-padding);
+  }
+
+  .login-text-container,
+  .signup-text-container {
+    width: 65%;
+  }
+
+  .signup-text-container h1 {
+    font-size: 6em;
+  }
+
+  .login-text-container h1 {
+    font-size: 4.75em;
+  }
+
+  .form-container {
+    width: calc(65% - var(--section-gap-padding));
+  }
+
+  .form-row h4 {
+    font-size: 1.25em;
+  }
+
+  .form-row:last-child {
+    gap: 2em;
+  }
+
+  .form-row:not(:last-child) {
+    margin-block-end: 1.5em;
+  }
+}

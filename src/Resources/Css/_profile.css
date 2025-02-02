@@ -1,0 +1,154 @@
+.profile-container {
+  display: flex;
+  gap: var(--section-gap-padding);
+  padding-block: var(--section-padding-small);
+}
+
+.profile-detail-container {
+  text-align: center;
+  width: 28%;
+  padding: var(--container-padding);
+  border-radius: var(--border-radius);
+  background-color: rgba(var(--color-light-rgb), 0.05);
+}
+
+.profile-detail-container > div {
+  margin-block-end: 1em;
+}
+
+.profile-img-container img {
+  width: 16em;
+  border-radius: 50%;
+}
+
+.profile-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile-content-container h3 {
+  font-size: 1.5em;
+  color: var(--color-light);
+}
+
+.profile-role-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.75em;
+  flex-wrap: wrap;
+}
+
+.profile-activity-container {
+  width: calc(72% - var(--section-gap-padding));
+  padding-block: var(--container-padding);
+}
+
+.profile-actions-container {
+  display: flex;
+  gap: 0.75em;
+  padding-block-end: var(--container-padding);
+  border-bottom: var(--border-width) solid var(--color-border-light);
+}
+
+.profile-activities-container {
+  padding-block: var(--section-padding-small);
+}
+
+.editProfile-container {
+  opacity: 0;
+  pointer-events: none;
+  overflow: scroll;
+  position: fixed;
+  z-index: 20;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 50%;
+  max-height: 800px;
+  padding: var(--container-padding);
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+}
+
+.editProfile-container.active {
+  pointer-events: all;
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.editProfile-overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.editProfile-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editProfile-title-container h4 {
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.delete-btn {
+  width: 3.25em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition: all var(--animation-smooth);
+}
+
+.delete-btn:hover {
+  transform: scale(1.25);
+}
+
+.delete-bar {
+  --rotate-deg: 45deg;
+  --bar-gap: 2.22px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: all var(--animation-smooth);
+}
+
+.delete-bar::before,
+.delete-bar::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 33%;
+  height: 1.5px;
+  margin: auto;
+  background-color: var(--color-dark);
+  transition: all var(--animation-smooth);
+}
+
+.delete-bar::before {
+  rotate: calc(var(--rotate-deg) * -1);
+}
+
+.delete-bar::after {
+  rotate: var(--rotate-deg);
+}
+
+.editProfile-form-container {
+  margin-block-start: 3em;
+}
+
+.editProfile-form-container .form-container {
+  width: 100%;
+}
+
+/* .editProfile-form-container label {
+  color: var(--color-light);
+}
+
+.editProfile-form-container input[type="text"],
+.editProfile-form-container input[type="email"] {
+  border-bottom: var(--border-width) solid var(--color-border-light);
+} */
