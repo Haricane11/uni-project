@@ -17,9 +17,7 @@ export default function Login() {
     handleSubmit,
     formState: {errors}
   } = useForm();
-
-  const blankMsg = "Please enter a name.";
-
+  
   const submitLogin = async (data) => {
     // const res = await fetch("http://localhost:8080/api/data", {
     //   method: "POST",
